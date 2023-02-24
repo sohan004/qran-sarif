@@ -1,5 +1,5 @@
 const drop = async () => {
-    const url = 'http://api.alquran.cloud/v1/surah'
+    const url = 'https://api.alquran.cloud/v1/surah'
     const res = await fetch(url);
     const data = await res.json();
     menu(data.data);
