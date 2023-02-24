@@ -29,7 +29,6 @@ const sura = async (a) => {
     const url2 = `https://api.alquran.cloud/v1/surah/${a}/ar`
     const res = await fetch(url2);
     const data = await res.json();
-    console.log(data)
     displaySura(data);
 
 }
@@ -46,7 +45,6 @@ const displaySura = a => {
         <h3 class="mb-4 lh-lg">${aya.text}</h3>`
 
     })
-    console.log(a)
 
 }
 sura(1);
