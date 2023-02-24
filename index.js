@@ -6,9 +6,12 @@ const drop = async () => {
 };
 
 const menu = a => {
+    const dropdownMenu = document.getElementById('dropdown-menu')
     a.forEach(element => {
-        document.getElementById('dropdown-menu').innerHTML += `
-        <li><a class="dropdown-item" href="#">${element.number}.    ${element.englishName}</a></li>`
+        const li = document.createElement('li');
+        li.innerHTML = ` 
+        <a class="dropdown-item" href="#">${element.number}.  ${element.englishName}</a>`
+        dropdownMenu.appendChild(li);
     });
 
     const dropdown = document.querySelectorAll(".dropdown-item")
@@ -46,5 +49,5 @@ const displaySura = a => {
     console.log(a)
 
 }
-sura(1)
-drop()
+sura(1);
+drop();
